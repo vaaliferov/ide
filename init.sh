@@ -6,6 +6,7 @@ sudo apt install -y python3-pip python3-venv python3-sklearn
 VIM_PLUG_URL="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs $VIM_PLUG_URL
 cp configs/vim/vimrc ~/.vimrc && vim +PlugInstall +qall # vim -> :PlugInstall
+cp configs/tmux/tmux.conf ~/.tmux.conf
 
 BTOP_URL="https://github.com/aristocratos/btop/releases/download/v1.1.1/btop-1.1.1-x86_64-linux-musl.tbz"
 mkdir -p btop && cd btop && wget $BTOP_URL -O btop.tbz && tar -xjf btop.tbz
