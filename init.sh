@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 sudo apt install -y wget curl aria2 tmux vim xclip htop kitty
-sudo apt install -y python3-pip python3-venv python3-sklearn
+sudo apt install -y python3-pip python3-venv python3-sklearn pandoc
 
 VIM_PLUG_URL="https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs $VIM_PLUG_URL
@@ -25,7 +25,7 @@ mkdir -p dev && python3 -m venv dev
 source dev/bin/activate
 python3 -m pip install wheel cython
 python3 -m pip install tqdm gdown joblib
-python3 -m pip install ipykernel ipython jupyterlab
+python3 -m pip install ipykernel ipython jupyterlab nbconvert
 python3 -m pip install numpy pandas scipy scikit-learn matplotlib
 python3 -m pip install nltk gensim sentencepiece youtokentome 
 python3 -m pip install transformers datasets tokenizers
