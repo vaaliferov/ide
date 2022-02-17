@@ -1,0 +1,22 @@
+curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs | sh
+
+NNN_OPENER=nuke NNN_FIFO=/tmp/nnn.fifo NNN_PLUG='y:preview-tabbed' nnn -a
+NNN_OPENER=nuke NNN_FIFO=/tmp/nnn.fifo NNN_PLUG='y:preview-tui' nnn -a
+
+https://tools.suckless.org/tabbed/
+
+https://github.com/jarun/nnn/blob/master/plugins/preview-tui
+
+kitty:
+allow_remote_control yes
+listen_on /tmp/nnn.fifo
+enabled_layouts all
+
+https://raw.githubusercontent.com/ranger/ranger/master/ranger/data/scope.sh
+USE_SCOPE 1
+
+NNN_OPENER=nuke NNN_FIFO=/tmp/nnn.fifo USE_SCOPE=1 NNN_PLUG='y:preview-tui' nnn -a
+
+
+NNN_PLUG='f:finder;o:fzopen;p:mocplay;d:diffs;t:nmount;v:imgview;d:dragdrop' nnn -d -D -l -o -H -F
+;key to run
