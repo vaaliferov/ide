@@ -2,7 +2,7 @@
 # https://github.com/pytorch/pytorch/issues/72045
 -f https://download.pytorch.org/whl/torch_stable.html
 torch==1.10.2+cpu
-torchtext==0.11.1
+torchtext==0.11.2
 torchaudio==0.10.2+cpu
 torchvision==0.11.3+cpu
 

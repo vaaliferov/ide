@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 USER=vaaliferov
+KERNEL_NAME=dev
 ENV_PATH=/home/$USER/dev
 
 rm -rf $ENV_PATH
@@ -23,7 +24,7 @@ source $ENV_PATH/bin/activate
 pip3 install --no-cache-dir wheel cython
 pip3 install --no-cache-dir -r req_dev.txt
 pip3 install --no-cache-dir -r req_cpu.txt
-ipykernel install --user --name $ENV_PATH
+python3 -m ipykernel install --user --name $KERNEL_NAME
 deactivate
 
 chmod 755 $ENV_PATH
